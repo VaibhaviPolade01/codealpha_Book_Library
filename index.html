@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Library</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M40,180V0h120v180a20,20,0,0,1-20,20H60A20,20,0,0,1,40,180ZM60,40h80v140H60Z' fill='%231679AB'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Book Library</h1>
+      <form id="book-form">
+        <input type="text" id="title" placeholder="Book Title" required />
+        <input type="text" id="author" placeholder="Author" required />
+        <input type="number" id="year" placeholder="Year" required />
+        <select id="category" required>
+          <option value="" disabled selected>Category</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Non-Fiction">Non-Fiction</option>
+          <option value="Science">Science</option>
+          <option value="History">History</option>
+        </select>
+        <button type="submit">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path
+              d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm0 21.75c-5.385 0-9.75-4.365-9.75-9.75S6.615 2.25 12 2.25 21.75 6.615 21.75 12 17.385 21.75 12 21.75z"
+            />
+            <path
+              d="M16.5 11.25H12.75V7.5h-1.5v3.75H7.5v1.5h3.75V16.5h1.5v-3.75H16.5z"
+            />
+          </svg>
+          Add Book
+        </button>
+      </form>
+
+      <form id="borrow-form">
+        <select id="borrow-book" required>
+          <option value="" disabled selected>Select Book to Borrow</option>
+        </select>
+        <input
+          type="text"
+          id="borrower"
+          placeholder="Borrower's Name"
+          required
+        />
+        <button type="submit">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path
+              d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm0 21.75c-5.385 0-9.75-4.365-9.75-9.75S6.615 2.25 12 2.25 21.75 6.615 21.75 12 17.385 21.75 12 21.75z"
+            />
+            <path
+              d="M16.5 11.25H12.75V7.5h-1.5v3.75H7.5v1.5h3.75V16.5h1.5v-3.75H16.5z"
+            />
+          </svg>
+          Borrow Book
+        </button>
+      </form>
+
+      <input type="text" id="search" placeholder="Search by title..." />
+      <select id="filter-category">
+        <option value="">All Categories</option>
+        <option value="Fiction">Fiction</option>
+        <option value="Non-Fiction">Non-Fiction</option>
+        <option value="Science">Science</option>
+        <option value="History">History</option>
+      </select>
+
+      <h2>Book List</h2>
+      <ul id="book-list"></ul>
+
+      <h2>Borrowing History</h2>
+      <ul id="borrowing-history"></ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
