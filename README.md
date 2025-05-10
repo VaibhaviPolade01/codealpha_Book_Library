@@ -1,6 +1,7 @@
 # codealpha_Book_Library
 
 📚  Book Library Web Application
+
    A simple and elegant web application for managing a personal book library. This app allows users to add books, categorize them, search by title, borrow books, and track borrowing history — all in one 
    clean and intuitive interface.
 
